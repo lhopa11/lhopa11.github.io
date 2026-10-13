@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abdou Alam</title>
 <style>
-body { background: #111; color: white; font-family: sans-serif; text-align: center; padding-top: 80px; }
-h1 { color: #00ff88; font-size: 40px; }
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+body{margin:0;background:#0a0a0a;color:white;font-family:'Cairo',sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center}
+.card{background:#151515;border:1px solid #222;padding:40px;border-radius:20px;box-shadow:0 0 40px rgba(0,255,136,0.15);max-width:400px;width:90%}
+h1{color:#00ff88;font-size:36px;margin:0;text-shadow:0 0 15px #00ff88;animation:glow 2s infinite alternate}
+@keyframes glow{from{text-shadow:0 0 10px #00ff88}to{text-shadow:0 0 25px #00ff88}}
+p{color:#aaa;margin-top:15px}
+.btn{display:inline-block;margin-top:25px;background:#00ff88;color:black;padding:12px 30px;border-radius:30px;text-decoration:none;font-weight:bold}
+.btn:hover{transform:scale(1.05);box-shadow:0 0 20px #00ff88}
+.badge{background:#222;padding:5px 12px;border-radius:20px;font-size:12px;margin:4px;display:inline-block;border:1px solid #333}
 </style>
 </head>
 <body>
-<h1>مرحبا، أنا عبدو عالم 👋</h1>
-<p>هذا أول موقع ديالي على GitHub</p>
+<div class="card">
+<h1>👋lhopa</h1>
+<p>مطور مواقع ومبرمج مستقبلي 🔥</p>
+<p>هذا أول موقع ديالي، والبداية فقط!</p>
+<div><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">GitHub</span><span class="badge">RGB</span></div>
+<a class="btn" href="https://github.com/abdoualam6-rgb">شوف GitHub ديالي</a>
+</div>
 </body>
 </html>
