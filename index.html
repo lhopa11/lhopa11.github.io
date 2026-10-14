@@ -1,1 +1,42 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pong lhopa11</title><style>body{margin:0;background:#0d1117;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif}canvas{background:#161b22;border:2px solid #30363d;border-radius:12px}button{margin-top:10px;background:#238636;color:#fff;border:0;padding:10px 16px;border-radius:8px;font-weight:700;cursor:pointer}</style></head><body><div id="s" style="font-size:24px;font-weight:700;margin:8px"><span id="p">0</span>-<span id="c">0</span> | Best:<span id="b">0</span></div><canvas id="g" width="800" height="450"></canvas><button id="btn" onclick="S()">▶️ Play Again</button><script>C=document.getElementById('g');X=C.getContext('2d');pY=cY=180;bX=400;bY=225;vX=vY=0;pS=cS=0;pl=0;B=localStorage.getItem('pb')||0;b.innerText=B;function S(){vX=Math.random()>0.5?5:-5;vY=Math.random()*4-2;pl=1;btn.style.display='none'}function R(){bX=400;bY=225;vX=vY=0;pl=0;btn.style.display='block';}C.onmousemove=e=>{pY=e.clientY-C.getBoundingClientRect().top-50};onkeydown=e=>{if(e.key==' ')S();if(e.key=='ArrowUp')pY-=30;if(e.key=='ArrowDown')pY+=30};setInterval(()=>{if(!pl)return;bX+=vX;bY+=vY;if(bY<0||bY>440)vY*=-1;if(bX<26&&bY>pY&&bY<pY+100){vX*=-1.1;bX=26}if(bX>762&&bY>cY&&bY<cY+100){vX*=-1.1;bX=762}cY+=(bY-(cY+50))*.07;if(bX<0){cS++;R()}if(bX>800){pS++;if(pS>B){B=pS;localStorage.setItem('pb',B);b.innerText=B}R()}p.innerText=pS;c.innerText=cS;pY=Math.max(0,Math.min(350,pY));cY=Math.max(0,Math.min(350,cY))},16);(function L(){X.clearRect(0,0,800,450);X.fillStyle='#fff';X.fillRect(15,pY,12,100);X.fillRect(773,cY,12,100);X.beginPath();X.arc(bX,bY,10,0,6.28);X.fill();requestAnimationFrame(L)})();</script></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>lhopa11 | خدمات ويب - فاس</title>
+<style>
+body{margin:0;font-family:sans-serif;background:#0d1117;color:#fff}
+.head{padding:40px 20px;text-align:center}
+.card{max-width:600px;margin:20px auto;background:#161b22;border:1px solid #30363d;border-radius:16px;padding:20px}
+.btn{display:block;background:#238636;color:#fff;text-align:center;padding:14px;border-radius:10px;font-weight:700;text-decoration:none;margin:10px 0}
+.btn.wa{background:#25D366} .btn.pay{background:#0070ba}
+.price{display:flex;gap:10px;margin-top:15px} .price div{flex:1;background:#0d1117;border:1px solid #30363d;padding:10px;border-radius:10px;text-align:center}
+small{opacity:.6}
+</style>
+</head>
+<body>
+<div class="head">
+<h1>lhopa11.github.io</h1>
+<p>كنصاوب مواقع، كنصلح المشاكل ديال GitHub، وكنوجد لك حلول رقمية</p>
+</div>
+
+<div class="card">
+<h3>🛠️ خدماتي</h3>
+<p>✅ موقع شخصي / شركة ب 299 درهم<br>✅ إصلاح مشاكل GitHub Pages<br>✅ تحويل فكرة للعبة ولا أداة</p>
+<a class="btn wa" href="https://wa.me/212600000000?text=Salam%20lhopa11%20bghit%20site">📲 هضر معايا فالواتساب</a>
+
+<div class="price">
+<div><b>Basic</b><br>299 DH<br><small>صفحة واحدة</small></div>
+<div><b>Pro</b><br>599 DH<br><small>3 صفحات + دومين</small></div>
+</div>
+</div>
+
+<div class="card">
+<h3>☕ دعم الموقع</h3>
+<p>عجبك الخدمة؟ تقدر تدعمني باش نزيد أدوات فابور</p>
+<a class="btn pay" href="https://paypal.me/lhopa11">PayPal / CIH Pay</a>
+<small>حط هنا كود Monetag ديالك باش تبدا تربح من الزيارات - غادي نوريك كيفاش</small>
+<!-- هنا غادي تحط كود الإعلان ديال Monetag -->
+</div>
+
+</body>
+</html>
